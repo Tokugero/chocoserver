@@ -1,6 +1,8 @@
 # Windows Dockerized Chocolatey Server
 ## Quickstart
 
+Add a persistent directory, or symlink to one, (This example uses C:\chocolatey) to survive docker death.
+
 `docker build -t chocoserver .`  
 `docker run -d -it -p 80:80/tcp -v "c:\chocolatey:c:\tools\chocolatey.server\App_Data\Packages" chocoserver`
 
